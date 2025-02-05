@@ -26,7 +26,14 @@ namespace FrontEnd.Helpers.Implementations
 
         public CategoryViewModel Add(CategoryViewModel category)
         {
-            throw new NotImplementedException();
+            HttpResponseMessage response = _ServiceRepository.PostResponse("api/Category", category);
+            if (response.IsSuccessStatusCode)
+            {
+                var content = response.Content.ReadAsStringAsync().Result;
+               
+            }
+
+            return category;
         }
 
         public CategoryViewModel Delete(int id)
