@@ -3,12 +3,6 @@ using BackEnd.Services.Interfaces;
 using DAL.Implementations;
 using DAL.Interfaces;
 using Entities.Entities;
-using Microsoft.AspNetCore.Identity;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Serilog;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
